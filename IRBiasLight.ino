@@ -26,6 +26,8 @@ CRGB _fastLEDs[numLEDs];
 #define POWER		0xE0E016E9	//Remote Enter/OK
 #define RAINBOW		0xE0E024DB	//Remote Sleep
 
+
+//Amount to step values by on each remote press
 #define BRIGHT_STEP 15
 #define COLOR_STEP 5
 
@@ -160,7 +162,7 @@ inline void save()
 
 inline void power()
 {
-	powerOn = !powerOn;
+	powerOn = false;
 	updateLEDs();
 }
 
